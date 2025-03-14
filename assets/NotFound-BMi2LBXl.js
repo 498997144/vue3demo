@@ -1,0 +1,1 @@
+import{c,a as s,b as a}from"./index-BzLn3uqd.js";const l=(e,t)=>{const o=e.__vccOpts||e;for(const[n,r]of t)o[n]=r;return o},_={};function f(e,t){return a(),c("div",null,t[0]||(t[0]=[s("h1",null,"不存在的页面",-1)]))}const d=l(_,[["render",f]]);export{d as default};
