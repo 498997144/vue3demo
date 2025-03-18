@@ -27,14 +27,15 @@ const loginForm = ref({
 })
 
 async function login() {
-  try {
-    const data = await commonService.login(loginForm.value)
-    if (data) {
-      router.push('/userInfo')
-    }
-  } catch (error) {
-    console.log(error)
-  }
+  alert(123)
+  // try {
+  //   const data = await commonService.login(loginForm.value)
+  //   if (data) {
+  //     router.push('/userInfo')
+  //   }
+  // } catch (error) {
+  //   console.log(error)
+  // }
 
 }
 

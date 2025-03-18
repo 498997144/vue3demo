@@ -1,5 +1,6 @@
 import {defineConfig, loadEnv} from 'vite'
 import vue from '@vitejs/plugin-vue'
+import viteCompression from 'vite-plugin-compression';
 import path from 'path'
 // https://vite.dev/config/
 export default defineConfig(({command, mode}) => {
@@ -7,7 +8,20 @@ export default defineConfig(({command, mode}) => {
   return {
     base: env.BASE_PATH,
     // 插件
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      // 构建完成后压缩配置
+      viteCompression({
+        verbose: true, // 是否在控制台输出压缩结果
+        disable: false, // 是否禁用压缩
+        threshold: 10240, // 对超过1kb的文件进行压缩
+        algorithm: 'brotliCompress', // 使用 brotli 压缩算法
+        ext: '.br', // 压缩后的文件扩展名
+        // algorithm: 'gzip', // 使用 gzip 压缩算法
+        // ext: '.gz', // 压缩后的文件扩展名
+        deleteOriginFile:true,
+      }),
+    ],
     //开发服务器
     server: {
       https: false,

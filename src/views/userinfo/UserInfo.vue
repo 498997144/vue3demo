@@ -19,7 +19,7 @@ import commonService from "@api/common/commonService.js"
 const user = ref({})
 
 onMounted(() => {
-  getUserInfo();
+  // getUserInfo();
 });
 
 async function getUserInfo() {
