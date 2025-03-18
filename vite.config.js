@@ -15,10 +15,10 @@ export default defineConfig(({command, mode}) => {
         verbose: true, // 是否在控制台输出压缩结果
         disable: false, // 是否禁用压缩
         threshold: 10240, // 对超过1kb的文件进行压缩
-        algorithm: 'brotliCompress', // 使用 brotli 压缩算法
-        ext: '.br', // 压缩后的文件扩展名
-        // algorithm: 'gzip', // 使用 gzip 压缩算法
-        // ext: '.gz', // 压缩后的文件扩展名
+        // algorithm: 'brotliCompress', // 使用 brotli 压缩算法
+        // ext: '.br', // 压缩后的文件扩展名
+        algorithm: 'gzip', // 使用 gzip 压缩算法
+        ext: '.gz', // 压缩后的文件扩展名
         deleteOriginFile:true,
       }),
     ],
